@@ -1,0 +1,7 @@
+p=0
+n=int(input("Ввести целое число"))
+a=float(input("Ввести вещественное число"))
+for i in range (n):
+    p = p+a
+print(p,end=" ")
+
