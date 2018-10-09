@@ -1,0 +1,4 @@
+n=int(input("Ввести число"))
+a=int(input("Ввести количество выведений числв на экран"))
+for i in range (a):
+    print(n,end=" ")
