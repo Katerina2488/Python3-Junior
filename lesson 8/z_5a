@@ -1,0 +1,12 @@
+n=int(input("Введите натуральное число"))
+posl =n%10
+n=n//10
+while True:
+      if n%10==0:
+        print("Все цифры одинаковые")
+        break
+      elif n%10==posl:
+          n=n%10
+      else:
+          print("не все цифры числа одинаковые")
+          break
