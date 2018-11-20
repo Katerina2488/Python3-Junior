@@ -1,0 +1,7 @@
+for n in range (10,100):
+    S=0
+    for vdel in range (1,n//2+1):
+        if n% vdel==0:
+            S=S+vdel
+    if S==n:
+        print(n)
