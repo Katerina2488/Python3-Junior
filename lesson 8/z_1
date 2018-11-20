@@ -1,0 +1,12 @@
+n=int(input("Введите целое число"))
+K=0
+n2=n
+while n2>0:
+    n2=n2//10
+    K+=1
+while n>0:
+    d=10**(K-1)
+    c=n//d
+    n=n%d
+    K-=1
+    print(c)
