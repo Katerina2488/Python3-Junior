@@ -1,0 +1,5 @@
+for i in range (5):
+    for n in range (2,21):
+        print (n, end= " " )
+    print ( )
+
