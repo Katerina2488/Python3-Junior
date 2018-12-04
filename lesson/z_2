@@ -1,0 +1,15 @@
+st = input("Введите строку ")
+sim1= input ("Введите символ о")
+sim2= input ("Введите символ а")
+k1=0
+k2=0
+for c in st: 
+    if c == sim1:
+        k1 = k1 + 1
+for c in st: 
+    if c == sim2:
+        k2 = k2 + 1        
+if k1>k2:
+    print("В стороке больше букв о")
+else:
+    print("В строке больше букв а")
