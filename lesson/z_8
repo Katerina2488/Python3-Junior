@@ -1,0 +1,3 @@
+st= input("Введите строку ")
+a=st.count("или")
+print(a)
