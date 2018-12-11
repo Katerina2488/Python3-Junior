@@ -1,0 +1,5 @@
+st=input("Введите строку ")
+podst=input("Введите подстроку ")
+podstrok=input("Введите подстроку, на которую нужно заменить ")
+st= st.replace(podst,podstrok)
+print (st)
