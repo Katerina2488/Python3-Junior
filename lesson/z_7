@@ -1,0 +1,10 @@
+st= input("Введите строку ")
+k=0
+a=st.count(",")
+for sim in st:
+    if sim.isdigit():
+        k+=1
+if a>k:
+    print("Запятых больше, чем цифр")
+else:
+    print("Цифр больше, чем запятых")
