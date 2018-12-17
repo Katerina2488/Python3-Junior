@@ -1,0 +1,37 @@
+fraza = input('Введите предложение: ')
+slovo1 = '' 
+nom = 0
+while fraza[nom] != ' ':
+    slovo1 = slovo1 + fraza[nom]
+    nom = nom + 1
+print('Первое слово предложения:', slovo1)
+nom = nom + 1
+slovo2 = '' 
+while fraza[nom] != ' ':
+    slovo2 = slovo2 + fraza[nom]
+    nom = nom + 1
+print('Второе слово предложения:', slovo2)
+slovo3 = '' 
+nom = 0
+while fraza[nom] != ' ':
+	slovo3 = slovo3 + fraza[nom]
+	nom = nom + 1
+print('Третье слово предложения:', slovo1)
+nom = nom + 1
+slovo4 = '' 
+while fraza[nom] != ' ':
+	slovo4 = slovo4 + fraza[nom]
+	nom = nom + 1
+print('Четвертое слово предложения:', slovo2)
+slovo5 = '' 
+nom = 0
+while fraza[nom] != ' ':
+	slovo5 = slovo5 + fraza[nom]
+	nom = nom + 1
+print('Пятое слово предложения:', slovo1)
+nom = nom + 1
+slovo6 = ''
+while fraza[nom] != ' ':
+	slovo6 = slovo6 + fraza[nom]
+	nom = nom + 1
+print('Шестое слово предложения:', slovo2)
