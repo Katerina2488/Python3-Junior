@@ -1,0 +1,4 @@
+fraza = input('Введите предложение: ')
+poz_prob = fraza.rfind(' ')
+slovo = fraza[poz_prob:len(fraza)] 
+print('Последнее слово предложения:', slovo)
