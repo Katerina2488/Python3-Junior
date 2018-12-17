@@ -1,0 +1,8 @@
+fraza = input('Введите предложение: ')
+poz_prob = fraza.rfind(' ')
+slovo1 = fraza[poz_prob:len(fraza)] 
+print('Последнее слово предложения:', slovo1)
+nach=poz_prob-1
+poz_prob = fraza.rfind(' ',nach) 
+slovo2 = fraza[nach:poz_prob]
+print('Предпоследнее слово предложения:', slovo2)
