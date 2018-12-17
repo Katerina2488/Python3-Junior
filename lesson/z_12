@@ -1,0 +1,12 @@
+fraza = input('Введите предложение: ')
+poz_prob = fraza.find(' ')
+slovo1 = fraza[0:poz_prob] 
+print('Первое слово предложения:', slovo1)
+nach=poz_prob+2
+poz_prob = fraza.find(' ', nach)
+slovo2 = fraza[nach:poz_prob]
+print('Второе слово предложения:', slovo2)
+nach=poz_prob+2
+poz_prob = fraza.find(' ', nach)
+slovo3 = fraza[nach:poz_prob]
+print('Третье слово предложения:', slovo3)
