@@ -1,0 +1,5 @@
+st=str(input("Введите число "))
+a=st.find(".")
+st1=st[0:a]
+print(len(st1))
+print(len(st)-len(st1)-1)
