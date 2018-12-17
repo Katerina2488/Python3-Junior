@@ -1,0 +1,5 @@
+st=input("Введите строку ")
+podst="а"
+podstrok="б"
+st= st.replace(podst,podstrok)
+print (st)
