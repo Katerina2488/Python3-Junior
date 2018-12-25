@@ -1,0 +1,17 @@
+a=[13,67,12,87,13,13]
+d=[]
+for el in a:
+    if el!=13:
+        d.append(el)
+
+
+    
+print(d)       
+
+
+a=[13,67,12,87,13,13]
+print(d)
+d=[el for el in a if el!=13]
+
+    
+print(d) 
