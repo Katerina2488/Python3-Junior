@@ -1,0 +1,9 @@
+n=input("Введите текст")
+sl={}
+for c in sl:
+    if c in sl:
+        sl[c]=sl[c]+1
+    else:
+        sl[c]=1
+for k in sl:
+    print (k,sl[k],sep=":")
