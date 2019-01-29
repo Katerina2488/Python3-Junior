@@ -4,7 +4,7 @@ n=10
 sp=[randint(0,100) for i in range(n)]
 print(sp)
 for i in range (n):
-    if sp[1]<sp[2]:
+    if sp[i]<sp[i+1]:
         k=k+1
     else:
         break
