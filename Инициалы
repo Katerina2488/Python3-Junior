@@ -1,0 +1,28 @@
+import turtle
+def K():
+    turtle.left(90)
+    turtle.forward(200)
+    turtle.backward(100)
+    turtle.right(90)
+    turtle.forward(10)
+    turtle.left(90)
+    turtle.forward(10)
+    turtle.right(90)
+    turtle.forward(10)
+    turtle.left(90)
+    turtle.forward(10)
+    turtle.right(90)
+    turtle.forward(10)
+    turtle.left(90)
+    turtle.forward(10)
+    turtle.right(90)
+
+
+
+
+    
+turtle.reset()        
+turtle.up()
+turtle.goto(50,0)
+turtle.down()
+K()
