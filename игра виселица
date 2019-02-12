@@ -1,0 +1,66 @@
+import random
+lives=0
+words=[]
+words1=["змея","лиса","куница","слон","выдра","олень","медведь","корова","щука"]
+words2=["береза","ирис","фиалка","кипарис","георгин","бархотка","роза"]
+words3=["торт","мясо","печенье","борщ","молоко","блины","сметана","сгущенка","каша"]
+
+clue=[]
+heart_symbol=u'\u2764'
+guessed_word_correctly=False
+
+def update_clue(guessed_latter,sekret_word,clue,k):
+    index=0
+    
+    while index<len(sekret_word):
+        if guessed_latter==sekret_word[index]:
+            clue[index]=guessed_latter
+            k-=1
+        index=index+1
+    return k
+print("Выберите тему игры: 1-животные,2-растения,3-еда")
+a=int(input("Введите тему игры"))
+if a==1:
+    words=words1
+elif a==2:
+    words=words2
+else:
+    words=words3
+sekret_word=random.choice(words)
+k=len(sekret_word)
+
+print("Выберите уровень сложности: 1-трудный,2-средний,3-легкий")
+n=int(input("Введите уровень сложности"))
+if n==1:
+    lives=3
+elif n==2:
+    lives=6
+else:
+    lives=9
+
+for i in range(len(sekret_word)):
+    clue.append("?")
+
+while lives>0:
+    print(clue)
+    print('Осталось жизней:'+heart_symbol*lives)
+    guess=input('Угадайте букву или слово целиком')
+    if guess==sekret_word:
+        guessed_word_correctly=True
+        break
+
+    if guess in sekret_word:
+        k=update_clue(guess,sekret_word,clue,k)
+    else:
+        print('Неправильно!Вы теряете жизнь')
+        lives=lives-1
+
+    if k==0:
+        guessed_word_correctly=True
+        break
+
+if guessed_word_correctly:
+    print("Победа! Загаданое слово:"+sekret_word)
+else:
+    print("Проигрыш! Загаданое слово:"+sekret_word)
+        
