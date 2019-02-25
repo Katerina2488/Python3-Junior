@@ -1,0 +1,6 @@
+sp=['l','o','y','r','w','d']
+f=open('zadacha2.txt','w')
+
+for el in sp:
+    f.write(el+'/n')
+f.close
