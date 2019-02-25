@@ -1,0 +1,8 @@
+for i in range(15):
+    n=int(input("Введите число от 50 до 100"))
+f=open('zadacha2.txt','w')
+
+for i in range (n):
+    f.write(str(i)+'/n')
+f.close
+
