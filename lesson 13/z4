@@ -1,0 +1,10 @@
+for i in range(10):
+    n=input("Введите название города")
+f=open('zadacha2.txt','w')
+
+for i in range (n):
+    f.write(str(i)+'/n')
+f.close
+
+
+
