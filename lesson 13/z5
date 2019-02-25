@@ -1,0 +1,10 @@
+from random import randint
+n=20
+sp=[randint (-100,100) for i in range (n)]
+print(sp)
+f=open('zadacha2.txt','w')
+for el in sp:
+    if el<0:
+        f.write(el+'/n')
+f.close
+
