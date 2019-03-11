@@ -1,0 +1,9 @@
+f=open('zadacha2.txt','r')
+
+
+
+list_str = f.read().split('\n')
+f.close()
+ 
+max_len = len(sorted(list_str,key = len,reverse = True)[0])
+print('максимальная длина строки =',max_len)
