@@ -4,5 +4,5 @@ f=open('zadacha2.txt','w')
 
 for i in range (n):
     f.write(str(i)+'/n')
-f.close
+f.close()
 
