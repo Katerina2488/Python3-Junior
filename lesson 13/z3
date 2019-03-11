@@ -1,5 +1,5 @@
 f=open('zadacha2.txt','w')
 for i in range (1,11):
     f.write(str(i*i)+'/n')
-f.close
+f.close()
 
