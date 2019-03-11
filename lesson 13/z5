@@ -6,5 +6,5 @@ f=open('zadacha2.txt','w')
 for el in sp:
     if el<0:
         f.write(el+'/n')
-f.close
+f.close()
 
