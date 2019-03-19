@@ -1,0 +1,73 @@
+from tkinter import *
+
+def Calculate(event):
+    n1=float(ch1.get())
+    n2=float(ch2.get())
+    if calc.get()==1:
+        otvet=n1+n2
+    elif calc.get()==2:
+        otvet=n1*n2
+    else:
+        if calc.get()==3:
+            otvet=n1-n2
+        else:
+            otvet=n1/n2
+    otvet=str("{:.3f}".format(otvet))
+
+    
+    vvod3.delete(0,END)
+    vvod3.insert(0,otvet)
+
+    
+
+def Vuhod(event):
+    root.destroy()
+
+root=Tk()
+root.title('Калькулятор')
+root.geometry('500x400')
+
+ch1=StringVar()
+ch2=StringVar()
+otvet=StringVar()
+calc=IntVar()
+calc.set(1)
+
+nadp1=Label(root,text='Введите первое число', font='Arial 10')
+nadp2=Label(root,text='Введите второе число', font='Arial 10')
+nadp3=Label(root,text='Результат', font='Arial 10')
+
+vvod1=Entry(root,width=10,textvariable=ch1)
+vvod2=Entry(root,width=10,textvariable=ch2)
+vvod3=Entry(root,width=10,textvariable=otvet)
+
+plus=Radiobutton(root,text="Сложение", font="Arial 10",value=1,variable=calc)
+umnog=Radiobutton(root,text="Умножение", font="Arial 10",value=2,variable=calc)
+vuch=Radiobutton(root,text="Вычитание", font="Arial 10",value=3,variable=calc)
+gelen=Radiobutton(root,text="Деление", font="Arial 10",value=4,variable=calc)
+
+                 
+but1=Button(root,text='Расчет')
+but2=Button(root,text='Выход')
+
+nadp1.place(x=30,y=10)
+vvod1.place(x=300,y=10)
+
+nadp2.place(x=30,y=40)
+vvod2.place(x=300,y=40)
+
+nadp3.place(x=30,y=70)
+vvod3.place(x=300,y=70)
+
+plus.place(x=30,y=150)
+umnog.place(x=130,y=150)
+vuch.place(x=230,y=150)
+gelen.place(x=330,y=150)
+
+but1.place(x=30,y=200)
+but2.place(x=110,y=200)
+
+but1.bind('<Button-1>',Calculate)
+but2.bind('<Button-1>',Vuhod)
+
+root.mainloop
