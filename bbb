@@ -1,0 +1,89 @@
+from tkinter import *
+import math
+
+def RaschetP(event):
+    a_dlin=float(a.get())
+    b_dlin=float(b.get())
+    c_dlin=float(c.get())
+    perim=a+b+c
+    perim=str("{:.3f}".format(perim))
+
+    
+    per.delete(0,END)
+    per.insert(0,ploshad)
+
+
+
+def RaschetS(event):
+    a_dlin=float(a.get())
+    b_dlin=float(b.get())
+    c_dlin=float(c.get())
+
+    p=(a_dlin+b+c)/2
+    ploshad=math.sqrt(p*(p-a)*(p-b)*(p-c))
+    ploshad=str("{:.3f}".format(ploshad))
+
+    
+    pl.delete(0,END)
+    pl.insert(0,ploshad)
+
+
+def Vihod(event):
+    root.destroy()
+
+root=Tk()
+root.title("Площадь и периметр треугольника")
+root.geometry('500x500')
+
+a=StringVar()
+b=StringVar()
+c=StringVar()
+per=StringVar()
+pl=StringVar()
+
+
+
+nadp1=Label(root,text='Введите длину первой стороны',font='Arial 10')
+vvod_a=Entry(root,width=10,textvariable=a)
+
+nadp2=Label(root,text='Введите длину второй стороны',font='Arial 10')
+vvod_b=Entry(root,width=10,textvariable=b)
+
+nadp3=Label(root,text='Введите длину третьей стороны',font='Arial 10')
+vvod_c=Entry(root,width=10,textvariable=c)
+
+nadp4=Label(root,text='Периметр треугольника',font='Arial 10')
+per=Entry(root,width=10,textvariable=per)
+
+nadp5=Label(root,text='Площадь треугольника',font='Arial 10')
+pl=Entry(root,width=10,textvariable=pl)
+
+
+Knop_raschet1=Button(root,text='Расчет периметра',width=10)
+Knop_raschet2=Button(root,text='Расчет площади',width=10)
+Knop_vuhod=Button(root,text='Выход',width=10)
+
+nadp1.place(x=10,y=10)
+vvod_a.place(x=120,y=10)
+
+nadp2.place(x=10,y=30)
+vvod_b.place(x=120,y=30)
+
+nadp3.place(x=10,y=50)
+vvod_c.place(x=120,y=90)
+
+nadp4.place(x=10,y=70)
+per.place(x=120,y=150)
+
+nadp1.place(x=10,y=90)
+pl.place(x=120,y=200)
+
+Knop_raschet1.place(x=10,y=70)
+Knop_raschet2.place(x=130,y=70)
+Knop_vuhod.place(x=220,y=70)
+
+Knop_raschet1.bind('<Button-1>',RaschetP)
+Knop_raschet2.bind('<Button-1>',RaschetS)
+Knop_vuhod.bind('<Button-1>',Vihod)
+
+root.mainloop()
