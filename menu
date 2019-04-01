@@ -1,0 +1,118 @@
+from tkinter import *
+root=Tk()
+
+def Vyhod(event):
+    root.destroy()
+
+
+def Summa(event):
+    otvet=0
+
+    if fl1.get()==1:
+        otvet+=500
+    if fl2.get()==1:
+        otvet+=390
+    if fl3.get()==1:
+        otvet+=420
+    if fl4.get()==1:
+        otvet+=150
+    if fl5.get()==1:
+        otvet+=600
+    if fl6.get()==1:
+        otvet+=520
+    if fl7.get()==1:
+        otvet+=210
+    if fl8.get()==1:
+        otvet+=400
+    if fl9.get()==1:
+        otvet+=325
+    if fl10.get()==1:
+        otvet+=109
+    if fl11.get()==1:
+        otvet+=210
+    if fl12.get()==1:
+        otvet+=120
+    
+    okno.delete(0,END)
+    okno.insert(0,otvet)
+
+        
+root.title("Меню")
+root.geometry("350x550")
+
+otvet=IntVar()
+
+fl1=IntVar()
+fl2=IntVar()
+fl3=IntVar()
+fl4=IntVar()
+fl5=IntVar()
+fl6=IntVar()
+fl7=IntVar()
+fl8=IntVar()
+fl9=IntVar()
+fl10=IntVar()
+fl11=IntVar()
+fl12=IntVar()
+
+calc=IntVar()
+calc.set(1)
+
+Vuhod=Button(root,text='Выход')
+Itog=Button(root,text='Итог')
+
+Vuhod.place(x=250,y=490)
+Itog.place(x=50,y=490)
+
+f1=Checkbutton(root,text="Цезарь..........500$",onvalue=1,offvalue=0,variable=fl1)
+f2=Checkbutton(root,text="Греческий..........390$",onvalue=1,offvalue=0,variable=fl2)
+f3=Checkbutton(root,text="Винегрет..........420$",onvalue=1,offvalue=0,variable=fl3)
+f4=Checkbutton(root,text="Запеченый картофель..........150$",onvalue=1,offvalue=0,variable=fl4)
+f5=Checkbutton(root,text="Кеноа..........600$",onvalue=1,offvalue=0,variable=fl5)
+f6=Checkbutton(root,text="Булгур..........520$",onvalue=1,offvalue=0,variable=fl6)
+f7=Checkbutton(root,text="Крем-суп из шампиньонов..........210$",onvalue=1,offvalue=0,variable=fl7)
+f8=Checkbutton(root,text="Суп Гаспачо..........400$",onvalue=1,offvalue=0,variable=fl8)
+f9=Checkbutton(root,text="Куриный суп-лапша..........325$",onvalue=1,offvalue=0,variable=fl9)
+f10=Checkbutton(root,text="Фондан..........109$",onvalue=1,offvalue=0,variable=fl10)
+f11=Checkbutton(root,text="Чизкейк..........210$",onvalue=1,offvalue=0,variable=fl11)
+f12=Checkbutton(root,text="Мороженое Нью-Йорк..........120$",onvalue=1,offvalue=0,variable=fl12)
+
+
+f1.place(x=20,y=60)
+f2.place(x=20,y=80)
+f3.place(x=20,y=100)
+f4.place(x=20,y=150)
+f5.place(x=20,y=170)
+f6.place(x=20,y=190)
+f7.place(x=20,y=240)
+f8.place(x=20,y=260)
+f9.place(x=20,y=280)
+f10.place(x=20,y=320)
+f11.place(x=20,y=340)
+f12.place(x=20,y=360)
+
+a1=Label(root,text='Салаты:')
+a2=Label(root,text='Гарниры:')
+a3=Label(root,text='Супы:')
+a4=Label(root,text='Десерты:')
+
+a1.place(x=20,y=30)
+a2.place(x=20,y=130)
+a3.place(x=20,y=220)
+a4.place(x=20,y=300)
+
+
+okno=Entry(root,width=10)
+okno.place(x=120,y=490)
+
+c1=Radiobutton(root,text="Да",value=1,variable=calc)
+c2=Radiobutton(root,text="Нет",value=2,variable=calc)
+c1.place(x=20,y=400)
+c2.place(x=80,y=400)
+
+
+Vuhod.bind('<Button-1>',Vyhod)
+Itog.bind('<Button-1>',Summa)
+
+root['bg']='pink'
+root.mainloop()
