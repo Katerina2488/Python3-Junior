@@ -1,0 +1,58 @@
+from tkinter import *
+canvas_width=700
+canvas_height=550
+brash_size=3
+color='black'
+
+def Paint(event):
+    global brash_size
+    global color
+    x1=event.x-brash_size
+    x2=event.x+brash_size
+    y1=event.y-brash_size
+    y2=event.y+brash_size
+    c.create_oval(x1,y1,x2,y2,fill=color,outline=color)
+
+
+def brashsizechange(new_size):
+    global brash_size
+    brash_size=new_size
+
+
+def colorchange(new_color):
+    global color
+    color=new_color
+
+def colorbg(new_color):
+    global color
+    c.configure(background=new_color)
+
+
+    
+root=Tk()
+
+root.title("Paint на Питоне")
+c=Canvas(root,width=canvas_width,height=canvas_height,bg='white')
+c.bind('<B1-Motion>',Paint)
+
+per=IntVar()
+per.set(10)
+
+red_button=Button(text='Красный',width=10,command=lambda:colorchange('red'),bg='red')
+clean_button=Button(text='Очистить',width=10,command=lambda:c.delete('all'))
+
+five_button=Button(text='5',width=10,command=lambda:brashsizechange(5))
+
+bg_blue=Radiobutton(text='Синий',variable=per,value=2,command=lambda:colorbg('blue'))
+
+c.grid(row=3,column=0,columnspan=9,padx=5,pady=50,sticky=E+W+S+N)
+
+red_button.grid(row=0,column=2)
+clean_button.grid(row=0,column=6)
+
+five_button.grid(row=1,column=2)
+
+bg_blue.grid(row=2,column=3)
+
+
+root.mainloop()
