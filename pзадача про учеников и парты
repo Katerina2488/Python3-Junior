@@ -1,0 +1,8 @@
+n1=int(input())
+n2=int(input())
+n3=int(input())
+c1=n1//2+n1%2
+c2=n2//2+n2%2
+c3=n3//2+n3%3
+
+print(c1+c2+c3)
