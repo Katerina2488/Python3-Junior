@@ -1,0 +1,7 @@
+col=int(input())
+rub=int(input())
+cop=int(input())
+st1=rub*col
+st2=cop*col%100
+st3=cop*col//100
+print(st1+st3,st2)
