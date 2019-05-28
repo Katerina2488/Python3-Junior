@@ -1,0 +1,5 @@
+n=int(input())
+start=8*60+30
+c=(n*45+10*(n-1))+start
+
+print(c//60,c%60)
