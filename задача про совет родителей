@@ -1,0 +1,6 @@
+import math
+n=int(input())
+k=int(input())
+c=n-k
+need=int(math.ceil(c/(2/3)))
+print(max(0,need-n))
