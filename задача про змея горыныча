@@ -1,0 +1,12 @@
+m=int(input())
+n=int(input())
+k=int(input())
+if k>n:
+    print("Нет")
+else:
+    while m!=0:
+        m=m-n+k
+        break
+    print(m)
+
+
