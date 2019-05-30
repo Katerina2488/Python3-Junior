@@ -1,0 +1,11 @@
+a=int(input())
+b=int(input())
+c=int(input())
+d=int(input())
+f=a*100+b
+e=c*100+d
+cop=e-f
+
+
+print(cop//100,cop%100)
+
