@@ -1,0 +1,8 @@
+x1=int(input())
+y1=int(input())
+x2=int(input())
+y2=int(input())
+if max(a,b)>c and max(c,d)>a:
+    print('Yes')
+else:
+    print('No')
