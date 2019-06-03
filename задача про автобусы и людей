@@ -1,0 +1,7 @@
+import math
+n,m,k=map(int,input().split())
+bus=math.ceil((n+m)/k)
+if bus <=m/2:
+    print(bus)
+else:
+    print(0)
