@@ -1,0 +1,8 @@
+m=int(input())
+otvet=1
+d=2
+while d**2<=m:
+    if m%(d**2)==0:
+        otvet=d**2
+    d+=1
+print(otvet)
