@@ -5,3 +5,11 @@ if bus <=m/2:
     print(bus)
 else:
     print(0)
+
+
+
+n,m,k=map(int,input().split())
+if (m//2)*K<2*(m//2)+n:
+    print(0)
+else:
+    print((m+n+k-1)//k)
