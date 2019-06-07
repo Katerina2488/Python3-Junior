@@ -1,0 +1,9 @@
+n=int(input())
+xmin=[]
+xmax=[]
+for i in range(n):
+    data=input().split(' ')
+    xmin.append(min(float(data[0]),float(data[1])))
+    xmax.append(max(float(data[0]),float(data[1])))
+print(xmin)
+print(xmax)
