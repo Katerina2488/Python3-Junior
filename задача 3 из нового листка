@@ -1,9 +1,16 @@
+import random
 n=int(input())
-xmin=[]
-xmax=[]
+xmin=list()
+xmax=list()
 for i in range(n):
-    data=input().split(' ')
-    xmin.append(min(float(data[0]),float(data[1])))
-    xmax.append(max(float(data[0]),float(data[1])))
-print(xmin)
-print(xmax)
+    data=input().split()
+    xmin.append(float(data[0]))
+    xmax.append(float(data[0]))
+maxmin=max(xmin)
+minmax=min(xmax)
+if maxmin<=minmax:
+    
+    print("Yes \n{}".format(round(random.uniform(maxmin<minmax,1)))
+else:
+    print("No")
+          
