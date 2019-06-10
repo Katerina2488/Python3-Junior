@@ -1,0 +1,7 @@
+f=open('capitel_data.txt','r')
+data=f.read()
+f.close()
+n_left=0
+n_turn=0
+n_tact=0
+stay=0
