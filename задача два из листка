@@ -1,0 +1,9 @@
+import math
+r=int(input())
+n=int(input())
+for i in range(n):
+  x=int(input())
+  y=int(input())
+  d=sqrt.math(x**2+y**2)
+  if d>r:
+    print(min(d))
