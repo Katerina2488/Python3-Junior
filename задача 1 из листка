@@ -1,0 +1,8 @@
+k=0
+f=open('capitel_data.txt','r')
+
+a=list(map(int,f.read().split()))
+print(a)
+minzn=min(a)
+print(minzn)
+print(a.count(minzn))
