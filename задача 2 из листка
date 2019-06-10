@@ -1,0 +1,21 @@
+found=False
+min_x=0
+min_y=0
+import math
+r=int(input())
+n=int(input())
+for i in range(n):
+    x=input().split()
+    x=int(value[0])
+    y=int(value[1])
+    d=sqrt.math(x**2+y**2)
+    if d>r and(not found or d<d_min):
+        found=True
+        d_min=d
+        min_x=0
+        min_y=0
+    if d_min>0:
+        print(min_x,min_y)
+    else:
+        
+        print('no')
