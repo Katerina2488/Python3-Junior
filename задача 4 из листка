@@ -1,0 +1,51 @@
+a=int(input())
+t=1
+maxS=a
+begmaxS=t
+finmaxS=t
+while a<0:
+    if a>maxS:
+        maxS=a
+        begmaxS=t
+        finmaxS=t
+    a=int(input())
+
+    if a==0:
+        print(begmaxS,finmaxS,maxS)
+        exit()
+    t=t+1
+
+tempS=a
+begmaxS=t
+finmaxS=t
+begtempS=t
+fintempS=t
+maxS=a
+while True:
+    
+    a=int(input())
+    if a==0:
+        print(begmaxS,finmaxS,maxS)
+        exit()
+
+    else:
+        t=t+1
+    if tempS>=0:
+        tempS=tempS+a
+        if a>0:
+            fintempS=t
+            if tempS>maxS:
+                begmaxS=begtempS
+                finmaxS=fintempS
+                maxS=tempS
+
+
+    elif a>0:
+        begtempS=t
+        fintempS=t
+        tempS=a
+
+        if tempS>maxS:
+            begmaxS=fintempS
+            finmaxS=fintempS
+            maxS=tempS
