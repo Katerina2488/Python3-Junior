@@ -5,3 +5,15 @@ n_left=0
 n_turn=0
 n_tact=0
 stay=0
+for a in data:
+    if a=='>':
+        n_left=n_left+1
+        if stay>0:
+            stay=stay-1
+    else:
+        n_turn+=n_left
+        n_tact=n_left+stay
+        if n_left>0:
+            stay+=1
+print(n_tact,n_turn)
+
