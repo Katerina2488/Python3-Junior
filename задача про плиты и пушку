@@ -1,0 +1,35 @@
+f=open('capitel_data.txt','r')
+n_test=int(f.readline())
+
+for i in range (n_test):
+    values=f.readline().split()
+    totShots=0 # общее кол-во выстрелов
+    summ=0 # кол-во плит на отрезке
+    fZero=False # а(1)=0
+    isZero=False #есть нули
+    oddSum1=False #признак нечетности первой суммы
+    shots=list(map(int,values[2: ]))
+    
+    if int(values[1])==0:
+        fZero=True
+        isZero=True
+    else:
+        summ=summ+int(values[1])
+    
+    for a in shots:
+        if a==0:
+            if not isZero:
+                isZero=True
+                oddSum1=(summ%2!=0)
+            totShots=totShots+(summ+1)//2
+            summ=0
+        else:
+            summ+=a
+
+    if a!=0:
+        if not fZero and isZero:
+            totShots=totShots+((summ+1-int(oddSum1))//2)
+        else:
+            totShots=totShots+((summ+1)//2)
+    print(totShots)
+f.close()
