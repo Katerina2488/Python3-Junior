@@ -1,1 +1,38 @@
 
+f= open('pascal_code2.pas','r')
+g= open('pascal_code_without_comment.pas','w')
+state="out"
+while True:
+    c=f.read(1)
+    if not c:
+        break
+    if state=='out':
+        if c!="(" and c!="'":
+            g.write(c)
+        else:
+            state='begc'
+    elif state=='begc':
+        if c=='*':
+            state='comm'
+        elif c=='(':
+            g.write(c)
+        elif c==')':
+            state='out'
+            g.write('( )')
+        elif c=="'":
+            state='out'
+            g.write(c)
+            
+        else:
+            state='out'
+            g.write("{}".format(c))
+    elif state=='comm':
+        if c=='*':
+            state='endc'
+    elif state=='endc':
+        if c=='(':
+            state='comm'
+        elif c==')':
+            state='out'
+        elif c=='*':
+            continue
