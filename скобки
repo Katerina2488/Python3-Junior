@@ -1,0 +1,18 @@
+f= open('skobki.txt','r')
+g= open('edinizaornol.txt','w')
+for line in f.readlines():
+    n_open=0
+    ok=True
+    for c in line.strip():
+        if c=='(':
+            n_open+=1
+        else:
+            n_open-=1
+        if n_open<0:
+            ok=False
+            break
+    ok=(n_open==0)
+    g.write(str(int(ok)))
+
+f.close()
+g.close()
