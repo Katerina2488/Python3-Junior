@@ -1,0 +1,5 @@
+a=set()
+f= open('skobki.txt','r')
+for word in f.read().split():
+    a.add(word)
+print(len(a))
