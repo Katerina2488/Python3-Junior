@@ -3,3 +3,15 @@ f= open('skobki.txt','r')
 for word in f.read().split():
     a.add(word)
 print(len(a))
+
+
+
+
+
+f= open('skobki.txt','r')
+g= open('mnogestva.txt','w')
+a=set(f.readline().split())
+b=set(f.readline().split())
+g.write(str(len(a.difference(b))))
+f.close()
+g.close()
