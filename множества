@@ -15,3 +15,6 @@ b=set(f.readline().split())
 g.write(str(len(a.difference(b))))
 f.close()
 g.close()
+
+
+print(len(set(list(map(int,input().split())))))
