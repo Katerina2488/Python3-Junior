@@ -1,0 +1,30 @@
+output=list()
+def fillonly(n):
+    if n==1:
+        output.append('+1')
+    else:
+        fillonly(n-1)
+        output.append("+{}".format(n))
+        free(n-1)
+        
+def free(n):
+    if n==1:
+        output.append("-1")
+    else:
+        fillonly(n-1)
+        output.append("-{}".format(n))
+        free(n-1)
+        
+def fill(n):
+    if n==1:
+        output.append("+1")
+    elif n==2:
+        output.append("+1+2")
+    else:
+        fillonly(n-1)
+        output.append("+{}".format(n))
+        fill(n-2)
+
+n=int(input())
+fill(n)
+print(" ".join(output))
