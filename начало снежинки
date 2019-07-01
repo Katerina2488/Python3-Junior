@@ -1,0 +1,14 @@
+from tkinter import *
+from math import *
+import sys
+
+size_x=600
+size_y=500
+step=7
+
+rank=int(input())
+root=Tk()
+c=Canvas(root,width=size_x,height=size_y,bg='black')
+c.pack()
+
+root.mainloop()
