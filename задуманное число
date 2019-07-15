@@ -1,0 +1,17 @@
+n=int(input())
+alll=set(range(1,n+1))
+possible=alll
+while True:
+    otvet=input()
+    if otvet=='HELP':
+        break
+    otvet={int(x)for x in otvet.split()}
+    otv=input()
+
+    if otv=='Yes':
+        possible &=otvet
+
+    else:
+        possible&=alll-otvet
+
+print(' '.join([str(x) for x in sorted(possible)]))
