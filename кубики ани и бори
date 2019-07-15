@@ -1,0 +1,13 @@
+N=int(input("Кол-во кубиков Ани"))
+M=int(input("Кол-во кубиков Бори"))
+a=set()
+b=set()
+
+for i in range(N):
+      a.add(int(input()))
+
+for i in range(M):
+      b.add(int(input()))
+
+
+print(a.intersection(b),a.difference(b),b.difference(a))
