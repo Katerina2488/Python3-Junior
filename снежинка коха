@@ -1,0 +1,27 @@
+from turtle import *
+def Koch(t, order, size):
+    if order==0:
+        t.forward(size)
+    else:
+        Koch(t,order-1,size/2.7)
+        t.left(60)
+        Koch(t,order-1,size/2.7)
+        t.right(120)
+        Koch(t,order-1,size/2.7)
+        t.left(60)
+        Koch(t,order-1,size/2.7)
+
+
+fr=Turtle()
+fr.speed(10)
+fr.penup()
+fr.backward(150)
+fr.pendown()
+fr.hideturtle()
+fr.pensize(2)
+fr.penup()
+fr.goto(-400,-200)
+fr.pendown()
+
+
+Koch(fr,5,500)
