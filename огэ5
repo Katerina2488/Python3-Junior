@@ -1,0 +1,10 @@
+z=0
+k=0
+n=int(input())
+while n!=0:
+    n=int(input())
+    k+=1
+    if n%2==0 and 0<n<=256:
+        z=z+n
+
+print(k,z)
