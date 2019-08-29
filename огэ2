@@ -1,0 +1,9 @@
+z=0
+n=int(input())
+while n!=0:
+    n=int(input())
+    if n/2==0:
+        if n/7==0:
+            z=z+1
+
+print(z)
