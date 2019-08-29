@@ -1,0 +1,67 @@
+задача 5
+z=0
+n=int(input())
+for i in range(n):
+    k=int(input())
+    if k%5==0:
+        z=z+k
+
+print(z)
+
+
+задача 6
+z=0
+n=int(input())
+for i in range(n):
+    k=int(input())
+    if k%6==0 and k%10==4:
+        z=z+1
+
+print(z)
+
+задача 7
+Max=0
+n=int(input())
+for i in range(n):
+    k=int(input())
+    if k%5==0 and k>Max:
+        Max=k
+        
+    
+print(Max)
+
+задача 9
+
+Max=0
+Min=300
+n=int(input())
+for i in range(n):
+    k=int(input())
+    if k>Max :
+        Max=k
+    if k<Min:
+        Min=k
+if Min>30:
+    print("No")
+else:
+    print("Yes")
+    
+print(Max)
+
+
+задача 10
+
+Max=0
+Min=300
+b=0
+n=int(input())
+for i in range(n):
+    k=int(input())
+    if k>Max :
+        Max=k
+    if k<Min:
+        Min=k
+    if k<30:
+        b=b+1
+    
+print(Max-Min,b)
